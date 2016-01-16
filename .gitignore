@@ -1,0 +1,14 @@
+**/Temp
+**/obj
+**/Library
+**/ProjectSettings
+**/.DS_Store
+**/*.swp
+**/android_builds
+**/ios_builds
+*.userprefs
+*.pidb
+**/*.apk
+**/*.ipa
+**/*.app
+TODO
