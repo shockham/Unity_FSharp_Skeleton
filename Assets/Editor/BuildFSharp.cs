@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEditor;
 using System.Diagnostics;
+using System;
 
 class BuildFSharp : AssetPostprocessor {
     static void OnPostprocessAllAssets (string[] ia, string[] da, string[] ma, string[] mfap) {
+        // skip if importing dll as already built
+        if (Array.IndexOf(ia, "Assets/dll/scripts.dll") > -1) return;
+
         // setup the process
         var p = new Process();
         p.StartInfo.FileName = "/usr/bin/make";
